@@ -5,11 +5,13 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "babel-node ./src/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",

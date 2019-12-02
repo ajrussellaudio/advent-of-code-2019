@@ -1,11 +1,11 @@
-import { findFuelForModule, totalFuelForModules } from '.';
+import { findFuel, totalFuelForModules } from '.';
 
-describe('findFuelForModule', () => {
+describe('findFuel', () => {
     test('works', () => {
-        expect(findFuelForModule(12)).toEqual(2);
-        expect(findFuelForModule(14)).toEqual(2);
-        expect(findFuelForModule(1969)).toEqual(966);
-        expect(findFuelForModule(100756)).toEqual(50346);
+        expect(findFuel(12)).toEqual(2);
+        expect(findFuel(14)).toEqual(2);
+        expect(findFuel(1969)).toEqual(966);
+        expect(findFuel(100756)).toEqual(50346);
     });
 });
 
