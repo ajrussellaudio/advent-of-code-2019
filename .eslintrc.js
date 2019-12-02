@@ -19,5 +19,6 @@ module.exports = {
         "indent": [2, 4], // 4 spaces for indentation
         "max-len": [2, 120], // 120 max line length
         "function-paren-newline": ["error", "consistent"],
+        "import/prefer-default-export": "off"
     },
 };
