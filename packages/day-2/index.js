@@ -1,33 +1,33 @@
 export class Intcode {
     constructor(program) {
-        this.program = program;
+        this.memory = program;
     }
 
     run() {
-        for (let i = 0; i < this.program.length; i += 4) {
-            switch (this.program[i]) {
+        for (let i = 0; i < this.memory.length; i += 4) {
+            switch (this.memory[i]) {
             case 1:
-                this.opcodeOne(this.program.slice(i + 1, i + 4));
+                this.opcodeOne(this.memory.slice(i + 1, i + 4));
                 break;
             case 2:
-                this.opcodeTwo(this.program.slice(i + 1, i + 4));
+                this.opcodeTwo(this.memory.slice(i + 1, i + 4));
                 break;
             case 99:
-                return this.program;
+                return this.memory;
             default:
                 break;
             }
         }
-        return this.program;
+        return this.memory;
     }
 
-    opcodeOne(positions) {
-        const [a, b, i] = positions;
-        this.program[i] = this.program[a] + this.program[b];
+    opcodeOne(addresses) {
+        const [a, b, i] = addresses;
+        this.memory[i] = this.memory[a] + this.memory[b];
     }
 
-    opcodeTwo(positions) {
-        const [a, b, i] = positions;
-        this.program[i] = this.program[a] * this.program[b];
+    opcodeTwo(addresses) {
+        const [a, b, i] = addresses;
+        this.memory[i] = this.memory[a] * this.memory[b];
     }
 }
