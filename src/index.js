@@ -3,6 +3,8 @@ import { totalFuelForModules } from '../packages/day-1';
 import { Intcode } from '../packages/day-2';
 import dayOneData from '../data/day-1.json';
 import dayTwoProgram from '../data/day-2.json';
+import dayThreePaths from '../data/day-3.json';
+import { distance } from '../packages/day-3-naive';
 
 // Day 1
 answerLogger(1, totalFuelForModules(dayOneData));
@@ -24,3 +26,6 @@ result = intcode.run();
 if (result[0] === target) {
     answerLogger(2, 100 * noun + verb);
 }
+
+// Day 3
+answerLogger(3, distance(dayThreePaths));
